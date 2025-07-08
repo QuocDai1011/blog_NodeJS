@@ -1,16 +1,16 @@
-const express = require('express')
-const morgan = require('morgan')
-const { engine } = require('express-handlebars')
-const path = require('path');
-const sass = require('sass');
-const { log } = require('console');
-const app = express()
-const port = 3001
+const express = require("express");
+const morgan = require("morgan");
+const { engine } = require("express-handlebars");
+const path = require("path");
+const sass = require("sass");
+const { log } = require("console");
+const app = express();
+const port = 3001;
 
-const route = require('./routes');
+const route = require("./routes");
 
 // file static
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use(express.urlencoded());
 app.use(express.json());
@@ -22,16 +22,17 @@ app.use(express.json());
 // app.use(morgan('combined'))
 
 //Template engine
-app.engine('hbs', engine({
-  defaultLayout: 'main',
-  extname: '.hbs',
-  // partialsDir: __dirname + 'resources/views/partials'
-}
-));
+app.engine(
+  "hbs",
+  engine({
+    defaultLayout: "main",
+    extname: ".hbs",
+    // partialsDir: __dirname + 'resources/views/partials'
+  }),
+);
 
-app.set('view engine', 'hbs');
-app.set('views', './src/resources/views');
+app.set("view engine", "hbs");
+app.set("views", "./src/resources/views");
 
 // routes init
 route(app);
-

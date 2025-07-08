@@ -4,6 +4,9 @@
   "description": "Chuong trinh NodeJS dau tien cua QuocDai",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint .",
+    "prepare": "husky",
+    "prettier": "lint-staged",
     "start": "nodemon --inspect src/index.js",
     "sass:build": "sass src/resources/scss/app.scss src/public/css/app.css --style compressed",
     "sass:watch": "sass --watch src/resources/scss:src/public/css",
@@ -19,9 +22,15 @@
     "express": "^5.1.0",
     "express-handlebars": "^8.0.2"
   },
+  "lint-staged": {
+    "src/**/*.{js,json,scss}": "prettier 'src/**/*.{js,json,scss}' --write --single-quote --tab-width 4 --trailing-comma all"
+  },
   "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
     "morgan": "^1.10.0",
     "nodemon": "^3.1.10",
+    "prettier": "^3.6.2",
     "sass": "^1.89.2"
   }
 }
