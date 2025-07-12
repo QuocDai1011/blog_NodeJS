@@ -1,0 +1,32 @@
+<div class="mt-4">
+  <div class="row">
+    <div class="col-lg-3">
+      <button
+        class="show-btn"
+        onclick="handleBuyCourse(this)"
+        data-name="{{course.name}}"
+      >ĐĂNG KÝ HỌC</button>
+    </div>
+
+    <div class="col-lg-9">
+      <h3 class="show-title">{{course.name}}</h3>
+      <iframe
+        class="show-video"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/{{course.videoID}}"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+      <p>{{course.description}}</p>
+    </div>
+  </div>
+</div>
+<script>
+  const handleBuyCourse = function (btn) { const nameCourse =
+  btn.getAttribute('data-name'); alert(`Bạn đã mua khóa "${nameCourse}" thành
+  công!`); }
+</script>

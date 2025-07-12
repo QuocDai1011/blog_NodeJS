@@ -4,6 +4,7 @@
   "description": "Chuong trinh NodeJS dau tien cua QuocDai",
   "main": "index.js",
   "scripts": {
+    "pretty": "prettier 'src/**/*.{js,json,scss}' --write --single-quote --tab-width 4 --trailing-comma all",
     "lint": "eslint .",
     "prepare": "husky",
     "prettier": "lint-staged",
@@ -20,7 +21,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^5.1.0",
-    "express-handlebars": "^8.0.2"
+    "express-handlebars": "^8.0.2",
+    "mongoose": "^8.16.2"
   },
   "lint-staged": {
     "src/**/*.{js,json,scss}": "prettier 'src/**/*.{js,json,scss}' --write --single-quote --tab-width 4 --trailing-comma all"

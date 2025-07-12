@@ -1,5 +1,6 @@
 const newsRouter = require("./news");
 const siteRouter = require("./site");
+const coursesRouter = require("./courses");
 
 const port = 3001;
 
@@ -8,10 +9,7 @@ function route(app) {
 
   app.use("/", siteRouter);
 
-  // app.get('/search', (req, res) => {
-  //     res.render('search');
-  //     // console.log(req.query.q);
-  // });
+  app.use("/courses", coursesRouter);
 
   app.get("/api/users", (req, res) => {
     res.json([

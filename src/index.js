@@ -8,6 +8,10 @@ const app = express();
 const port = 3001;
 
 const route = require("./routes");
+const db = require("./config/db");
+
+//connect db
+db.connect();
 
 // file static
 app.use(express.static(path.join(__dirname, "public")));
@@ -32,7 +36,7 @@ app.engine(
 );
 
 app.set("view engine", "hbs");
-app.set("views", "./src/resources/views");
+app.set("views", path.join(__dirname, "resources", "views"));
 
 // routes init
 route(app);

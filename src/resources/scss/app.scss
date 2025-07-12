@@ -1,5 +1,41 @@
-@import "variable";
+@use "variable";
 
-h1 {
-  color: $color;
+.courses-item {
+  margin-top: 32px !important;
+}
+
+.course-card-item {
+  height: 450px;
+  max-height: 100%;
+}
+
+.course-card-item-height {
+  min-height: 100px;
+}
+
+.course-card-item-title {
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+}
+
+// show.hbs
+.show-btn {
+  background-color: #0094fb;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  padding: 4px 16px;
+  border-radius: 25px;
+}
+
+.show-title {
+  margin-bottom: 16px;
+}
+
+.show-video {
+  width: 70%;
+  margin-bottom: 16px;
 }
