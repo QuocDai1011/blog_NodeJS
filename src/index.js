@@ -1,6 +1,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const { engine } = require("express-handlebars");
+const methodOverride = require("method-override");
 const path = require("path");
 const sass = require("sass");
 const { log } = require("console");
@@ -19,6 +20,8 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded());
 app.use(express.json());
 
+app.use(methodOverride("_method"));
+
 // file scss
 // const result = sass.compile()
 
@@ -31,7 +34,10 @@ app.engine(
   engine({
     defaultLayout: "main",
     extname: ".hbs",
-    // partialsDir: __dirname + 'resources/views/partials'
+    partialsDir: path.join(__dirname, "resources/views/partials"), // đúng
+    helpers: {
+      sum: (a, b) => a + b,
+    },
   }),
 );
 

@@ -1,0 +1,26 @@
+<div class="mt-4">
+  <h3>Tạo mới khóa học</h3>
+  <form method="POST" action="/courses/store">
+    <div class="input-group mt-5">
+      <span class="input-group-text width136">Tên khóa học</span>
+      <input type="text" class="form-control" id="name" name="name" />
+    </div>
+
+    <div class="input-group mt-4">
+      <span class="input-group-text width136">Mô tả khóa học</span>
+      <input
+        type="text"
+        class="form-control"
+        id="description"
+        name="description"
+      />
+    </div>
+
+    <div class="input-group mt-4">
+      <span class="input-group-text width136">Video ID</span>
+      <input type="text" class="form-control" id="videoID" name="videoID" />
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Thêm khóa học</button>
+  </form>
+</div>

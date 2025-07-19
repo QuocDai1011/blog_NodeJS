@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
+  <div class="container">
     <a class="navbar-brand" href="/">MyLy software</a>
     <button
       class="navbar-toggler"
@@ -13,14 +13,36 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <div class="dropdown">
+            <button
+              class="btn btn-light dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                class="user-avatar"
+                src="https://img.freepik.com/premium-vector/person-with-blue-shirt-that-says-name-person_1029948-7040.jpg?semt=ais_hybrid&w=740"
+                alt=""
+              />
+              Mỹ Ly
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/courses/create">Đăng khóa học</a></li>
+              <li><div class="dropdown-divider"></div></li>
+              <li><a class="dropdown-item" href="me/stored/courses">Khóa học của
+                  tôi</a></li>
+              <li><a class="dropdown-item" href="me/stored/news">Bài viết của
+                  tôi</a></li>
+              <li><div class="dropdown-divider"></div></li>
+              <li><a class="dropdown-item" href="">Đăng xuất</a></li>
+            </ul>
+          </div>
         </li>
       </ul>
     </div>
   </div>
+
 </nav>

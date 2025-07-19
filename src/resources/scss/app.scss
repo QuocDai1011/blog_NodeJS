@@ -1,16 +1,35 @@
 @use "variable";
 
+.row-edit {
+  height: 600px;
+}
+
 .courses-item {
   margin-top: 32px !important;
+  min-height: 100%;
 }
 
 .course-card-item {
-  height: 450px;
+  min-height: 100%;
+}
+
+.card-img-top-edit {
+  height: 240px;
   max-height: 100%;
 }
 
 .course-card-item-height {
-  min-height: 100px;
+  flex: 1;
+}
+
+.card-body-edit {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-edit {
+  margin-top: 16px;
+  width: 40%;
 }
 
 .course-card-item-title {
@@ -31,11 +50,34 @@ a {
   border-radius: 25px;
 }
 
-.show-title {
-  margin-bottom: 16px;
-}
-
 .show-video {
   width: 70%;
-  margin-bottom: 16px;
+}
+
+//create.hbs
+.width136 {
+  width: 136px;
+}
+
+.user-avatar {
+  height: 32px;
+  width: 33px;
+  border-radius: 50%;
+}
+
+//stored-courses.hbs
+.modal.show .modal-dialog {
+  transform: translate(0, -22%) !important;
+}
+
+.trash-can {
+  a {
+    color: #000;
+    padding: 8px 10px;
+    text-decoration-line: underline;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
 }
